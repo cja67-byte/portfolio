@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Chigozirim Amaefule's Python class projects: currency tracking, news organization, and data manipulation in Google Colab.">
+  <title>Projects | Chigozirim Amaefule</title>
+  <link rel="stylesheet" href="css/styles.css"><script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Chigozirim Amaefule, home">Chigozirim<br>Amaefule<span aria-hidden="true">.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>Menu <span aria-hidden="true">+</span></button>
+      <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html#interests">My interests</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="projects-heading">
+        <p class="eyebrow">Selected work / Python + Google Colab</p>
+        <h1 id="projects-heading">From classroom code to practical ideas.</h1>
+        <div class="hero-bottom"><p>Three showcases from two class notebooks.<br>Working with APIs, databases, and everyday data.</p><a class="outlined-link" href="#project-gallery">Explore the work <span aria-hidden="true">↘</span></a></div>
+      </section>
+      <section id="project-gallery" aria-label="Class project collection">
+        <div class="project-filter" role="group" aria-label="Filter projects" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">Show all</button>
+          <button type="button" data-filter="api" aria-pressed="false">APIs + databases</button>
+          <button type="button" data-filter="data" aria-pressed="false">Data manipulation</button>
+        </div>
+        <p id="project-count" class="project-count" role="status">Showing all 3 projects</p>
+        <div class="project-grid">
+      <article class="project-card" data-project-category="api" id="currency-tracker">
+        <img src="assets/images/currency-tracker.svg" width="960" height="420" alt="Currency exchange tracker: GBP → USD. Designed summary graphic, not an application screenshot." loading="lazy">
+        <div class="project-body">
+          <p class="eyebrow">API + SQLite / Class project</p>
+          <h2>Currency exchange tracker</h2><p>A Python workflow that retrieves a GBP-to-USD exchange rate, stores it with a timestamp in SQLite, and reads the saved record back.</p>
+          <div class="project-result"><strong>1 GBP = 1.32482236 USD</strong><p>Recorded notebook result, not a current exchange rate.</p></div>
+          <details><summary>Explore the project</summary>
+            <h3>How it works</h3><p>Requests retrieves JSON data; dictionary access selects the currency pair; parameterized SQL inserts the rate into a local database.</p>
+            <h3>Skills demonstrated</h3><p>API responses, JSON dictionaries, SQL inserts, and persistent storage.</p>
+            <h3>Scope and next steps</h3><p>The original exercise does not yet handle failed requests or validate API responses. The rate column is declared INTEGER even though the recorded value is fractional.</p>
+            <p class="project-source">Source: API-based projects · Project 2. Work completed in Google Colab; presentation prepared for this portfolio.</p>
+            <details class="source-details"><summary>Read the original Python code</summary><pre><code>import requests
+import sqlite3
+import time
+
+
+fromCur = &quot;gbp&quot;
+toCur = &quot;usd&quot;
+
+url = f&quot;https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/{fromCur}.json&quot;
+
+response = requests.get(url)
+data = response.json()
+
+toCurVal = data[fromCur][toCur]
+
+
+def create_database(db_name):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+
+    # Create &#39;rates&#39; table for storing the rates
+    # Each table design will be unique based on the API you visit
+    cursor.execute(&#39;&#39;&#39;
+        CREATE TABLE IF NOT EXISTS rates (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            fromCur TEXT,
+            toCur TEXT,
+            rate INTEGER,
+            time TEXT
+        )
+    &#39;&#39;&#39;)
+
+    conn.commit()
+    return conn, cursor
+
+def insert_rate_to_db(cursor, fromCur, toCur, toCurVal, conn):
+    # SQL command to insert data into the rates table
+    cursor.execute(&#39;&#39;&#39;
+        INSERT INTO rates (fromCur, toCur, rate, time)
+        VALUES (?, ?, ?, ?)
+    &#39;&#39;&#39;, (
+        fromCur,
+        toCur,
+        toCurVal,
+        time.time()
+    ))
+    conn.commit()
+    print(&quot;Fact inserted successfully&quot;)
+
+
+conn, cursor = create_database(&#39;rates.db&#39;)
+insert_rate_to_db(cursor, fromCur, toCur, toCurVal, conn)
+
+
+def read_rates_from_db(cursor):
+    cursor.execute(&#39;SELECT * FROM rates&#39;)
+    rates = cursor.fetchall()
+    return rates
+
+# Example usage
+
+# Connect to the existing database
+conn = sqlite3.connect(&quot;rates.db&quot;)
+cursor = conn.cursor()
+
+# Read facts from db
+rates = read_rates_from_db(cursor)
+
+# print facts
+for rate in rates:
+   print(rate)
+</code></pre></details>
+          </details>
+          <a class="text-link" href="assets/notebooks/currency-tracker.ipynb" download>Download notebook <span aria-hidden="true">↓</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-project-category="api" id="news-aggregator">
+        <img src="assets/images/news-aggregator.svg" width="960" height="420" alt="News headline organizer: HEADLINES → SQLITE. Designed summary graphic, not an application screenshot." loading="lazy">
+        <div class="project-body">
+          <p class="eyebrow">API + SQLite / Class project</p>
+          <h2>News headline organizer</h2><p>A menu-driven Python application for fetching up to five headlines, saving them in SQLite, and searching or deleting saved entries.</p>
+          <div class="project-result"><strong>Fetch. Save. Search.</strong><p>The notebook records a fetch-and-save session. Search and date deletion are present in the code but were not rerun for this showcase.</p></div>
+          <details><summary>Explore the project</summary>
+            <h3>How it works</h3><p>Requests fetches NewsAPI results. Normalized headline keys and a UNIQUE constraint prevent duplicate titles; keyword search and inclusive date ranges organize saved entries.</p>
+            <h3>Skills demonstrated</h3><p>Functions, API error handling, database constraints, and input validation.</p>
+            <h3>Scope and next steps</h3><p>Running this notebook requires a personal NewsAPI key in the NEWS_API_KEY environment variable. The portfolio does not call the API or run a database.</p>
+            <p class="project-source">Source: Data manipulation assignment · Question 8. Work completed in Google Colab; presentation prepared for this portfolio.</p>
+            <details class="source-details"><summary>Read the original Python code</summary><pre><code>&quot;&quot;&quot;Fetch NewsAPI headlines and store them in a local SQLite database.&quot;&quot;&quot;
+
+import os
+import sqlite3
+from datetime import date
+from pathlib import Path
+
+import requests
+
+
+# Scripts save beside this file; notebooks save in their current working folder.
+DATABASE = Path.cwd() / &quot;news.db&quot;
+CATEGORIES = {&quot;business&quot;, &quot;entertainment&quot;, &quot;general&quot;, &quot;health&quot;, &quot;science&quot;,
+              &quot;sports&quot;, &quot;technology&quot;}
+
+
+def initialize_database(connection):
+    connection.execute(&quot;&quot;&quot;
+        CREATE TABLE IF NOT EXISTS headlines (
+            id INTEGER PRIMARY KEY,
+            title TEXT NOT NULL,
+            title_key TEXT NOT NULL UNIQUE,
+            description TEXT,
+            published_at TEXT
+        )
+    &quot;&quot;&quot;)
+    connection.commit()
+
+
+def fetch_headlines(topic, api_key):
+    params = {&quot;pageSize&quot;: 5}
+    if topic.lower() in CATEGORIES:
+        params.update(category=topic.lower(), country=&quot;us&quot;)
+    else:
+        params[&quot;q&quot;] = topic
+    response = requests.get(
+        &quot;https://newsapi.org/v2/top-headlines&quot;,
+        params=params,
+        headers={&quot;X-Api-Key&quot;: api_key},
+        timeout=20,
+    )
+    response.raise_for_status()
+    data = response.json()
+    if data.get(&quot;status&quot;) != &quot;ok&quot;:
+        raise ValueError(data.get(&quot;message&quot;, &quot;NewsAPI returned an error.&quot;))
+    return data.get(&quot;articles&quot;, [])[:5]
+
+
+def save_headlines(connection, articles):
+    &quot;&quot;&quot;Return database IDs, including IDs of already stored headlines.&quot;&quot;&quot;
+    ids = []
+    with connection:
+        for article in articles:
+            title = (article.get(&quot;title&quot;) or &quot;&quot;).strip()
+            if not title or title == &quot;[Removed]&quot;:
+                continue
+            key = &quot; &quot;.join(title.casefold().split())
+            connection.execute(&quot;&quot;&quot;
+                INSERT INTO headlines
+                    (title, title_key, description, published_at)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(title_key) DO NOTHING
+            &quot;&quot;&quot;, (title, key, article.get(&quot;description&quot;),
+                  article.get(&quot;publishedAt&quot;)))
+            row = connection.execute(
+                &quot;SELECT id FROM headlines WHERE title_key = ?&quot;, (key,)
+            ).fetchone()
+            if row[0] not in ids:
+                ids.append(row[0])
+    return ids
+
+
+def display_headlines(rows):
+    if not rows:
+        print(&quot;No headlines found.&quot;)
+        return
+    print(&quot;\nTop Headlines:\n&quot;)
+    for number, row in enumerate(rows, 1):
+        print(f&quot;{number}. Title: {row[&#39;title&#39;]}&quot;)
+        print(f&quot;   Description: {row[&#39;description&#39;] or &#39;No description available.&#39;}&quot;)
+        print(f&quot;   Published At: {row[&#39;published_at&#39;] or &#39;Unknown&#39;}\n&quot;)
+
+
+def search_headlines(connection, keyword):
+    # instr treats %, _ and other characters as literal text.
+    key = &quot; &quot;.join(keyword.casefold().split())
+    if not key:
+        raise ValueError(&quot;Enter a nonempty keyword.&quot;)
+    return connection.execute(&quot;&quot;&quot;
+        SELECT * FROM headlines WHERE instr(title_key, ?) &gt; 0
+        ORDER BY published_at DESC, id DESC
+    &quot;&quot;&quot;, (key,)).fetchall()
+
+
+def delete_headlines(connection, start, end):
+    start_date = date.fromisoformat(start)
+    end_date = date.fromisoformat(end)
+    if start_date &gt; end_date:
+        raise ValueError(&quot;Start date must be on or before end date.&quot;)
+    # Both endpoints are inclusive, using the publication date in UTC.
+    with connection:
+        cursor = connection.execute(&quot;&quot;&quot;
+            DELETE FROM headlines WHERE date(published_at) BETWEEN ? AND ?
+        &quot;&quot;&quot;, (start_date.isoformat(), end_date.isoformat()))
+    return cursor.rowcount
+
+
+def main():
+    connection = sqlite3.connect(DATABASE)
+    connection.row_factory = sqlite3.Row
+    try:
+        initialize_database(connection)
+        while True:
+            print(&quot;\n1. Fetch news  2. Search saved headlines  3. Delete by date  4. Exit&quot;)
+            choice = input(&quot;Choose an option: &quot;).strip()
+            try:
+                if choice == &quot;1&quot;:
+                    topic = input(&quot;Enter news topic: &quot;).strip()
+                    if not topic:
+                        raise ValueError(&quot;Enter a nonempty news topic.&quot;)
+                    api_key = os.environ.get(&quot;NEWS_API_KEY&quot;, &quot;&quot;).strip()
+                    if not api_key:
+                        raise ValueError(&quot;Set the NEWS_API_KEY environment variable first.&quot;)
+                    ids = save_headlines(connection, fetch_headlines(topic, api_key))
+                    # Read stored values back, preserving the API result order.
+                    rows = [connection.execute(
+                        &quot;SELECT * FROM headlines WHERE id = ?&quot;, (item_id,)
+                    ).fetchone() for item_id in ids]
+                    display_headlines(rows)
+                    if rows:
+                        print(&quot;Data has been saved to the database (duplicates skipped).&quot;)
+                elif choice == &quot;2&quot;:
+                    display_headlines(search_headlines(
+                        connection, input(&quot;Enter headline keyword: &quot;)
+                    ))
+                elif choice == &quot;3&quot;:
+                    start = input(&quot;Start date (YYYY-MM-DD, inclusive): &quot;).strip()
+                    end = input(&quot;End date (YYYY-MM-DD, inclusive): &quot;).strip()
+                    count = delete_headlines(connection, start, end)
+                    print(f&quot;Deleted {count} headline(s).&quot;)
+                elif choice == &quot;4&quot;:
+                    print(&quot;Goodbye!&quot;)
+                    break
+                else:
+                    print(&quot;Choose 1, 2, 3, or 4.&quot;)
+            except (requests.RequestException, ValueError, sqlite3.Error) as error:
+                print(f&quot;Error: {error}&quot;)
+    finally:
+        connection.close()
+
+
+if __name__ == &quot;__main__&quot;:
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print(&quot;\nGoodbye.&quot;)
+</code></pre></details>
+          </details>
+          <a class="text-link" href="assets/notebooks/news-aggregator.ipynb" download>Download notebook <span aria-hidden="true">↓</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-project-category="data" id="python-data-lab">
+        <img src="assets/images/python-data-lab.svg" width="960" height="420" alt="Python data lab: 17°C — 27°C. Designed summary graphic, not an application screenshot." loading="lazy">
+        <div class="project-body">
+          <p class="eyebrow">Data manipulation / Class project</p>
+          <h2>Python data lab</h2><p>Six class exercises that turn lists and dictionaries into useful summaries: temperature analysis, grade processing, inventory calculations, list operations, text processing, and matrix addition.</p>
+          <div class="project-result"><strong>30 days. 5 above 24°C.</strong><p>Recorded outputs also show a 17–27°C temperature range, an 82.5 average score, and nine passing scores out of ten.</p></div>
+          <details><summary>Explore the project</summary>
+            <h3>How it works</h3><p>Loops and conditionals identify patterns; comprehensions filter values; nested loops add two matrices; dictionary fields support inventory calculations.</p>
+            <h3>Skills demonstrated</h3><p>Python fundamentals, aggregation, filtering, and working with structured data.</p>
+            <h3>Scope and next steps</h3><p>The inventory code uses inclusive thresholds (≤20 and ≤15), while the prompts specify strict less-than thresholds. The download preserves the original work.</p>
+            <p class="project-source">Source: Data manipulation assignment · Questions 1–6. Work completed in Google Colab; presentation prepared for this portfolio.</p>
+            <details class="source-details"><summary>Read the original Python code</summary><pre><code>temperatures = [18, 22, 19, 25, 17, 21, 23, 20, 26, 24, 19, 22, 27, 21, 23, 18, 24, 25, 19, 20, 22, 26, 23, 21, 19, 24, 22, 20, 18, 23]
+# Calculate and print the number of days with temperatures above 24&#176;C.
+hot_days = 0
+for temp in temperatures:
+  if temp &gt; 24:
+    hot_days += 1
+print(f&quot;Number of hot days (above 24&#176;C): {hot_days}&quot;)
+
+#Identify and print the highest and lowest temperatures of the month.
+highest_temp =  max(temperatures)
+lowest_temp = min(temperatures)
+print(f&quot;Highest temperature of the month: {highest_temp}&#176;C&quot;)
+print(f&quot;Lowest temperature of the month: {lowest_temp}&#176;C&quot;)
+
+
+
+scores = [88, 76, 90, 85, 92, 67, 73, 81, 95, 78]
+
+# Calculates and prints the average score.
+average_score = sum(scores) / len(scores)
+print(f&quot;Average score: {average_score}&quot;)
+
+# Determines the number of students who passed and failed. (Assume a passing score is 70 or above.)
+passed_students = sum(1 for score in scores if score &gt;= 70)
+failed_students = sum(1 for score in scores if score &lt; 70)
+print(f&quot;Number of students who passed: {passed_students}&quot;)
+print(f&quot;Number of students who failed: {failed_students}&quot;)
+
+# Prints a message for each student indicating &quot;Pass&quot; or &quot;Fail&quot;.
+for i, score in enumerate(scores, start=1):
+  status = &quot;Pass&quot; if score &gt;= 70 else &quot;Fail&quot;
+  print(f&quot;Student {i}: {status}&quot;)
+
+
+
+# @title
+inventory = [
+    {&#39;item&#39;: &#39;Apple&#39;, &#39;quantity&#39;: 50, &#39;price&#39;: 0.5},
+    {&#39;item&#39;: &#39;Banana&#39;, &#39;quantity&#39;: 20, &#39;price&#39;: 0.3},
+    {&#39;item&#39;: &#39;Orange&#39;, &#39;quantity&#39;: 30, &#39;price&#39;: 0.7},
+    {&#39;item&#39;: &#39;Grapes&#39;, &#39;quantity&#39;: 15, &#39;price&#39;: 1.5},
+    {&#39;item&#39;: &#39;Mango&#39;, &#39;quantity&#39;: 10, &#39;price&#39;: 2.0},
+    ]
+
+# Identify items that need restocking (quantity less than 20).
+# restock_items = [item[&#39;item&#39;]] for item in inventory if item[&#39;quantity&#39;] &lt;= 20
+# print(f&quot;Items to restock: {&#39;, &#39;.join(restock_items)}&quot;)y
+
+print(&quot;the folloqing items need restock:&quot;)
+for item in inventory:
+  # q = item[&#39;quantity&#39;]
+  # n = item[&quot;item&quot;]
+  if item[&#39;quantity&#39;] &lt;= 20:
+    print(item[&quot;item&quot;])
+
+# Calculate the total value of the current inventory.
+total_value = 0.0
+for item in inventory:
+  total_value += item[&#39;quantity&#39;] * item[&#39;price&#39;]
+
+print(f&quot;Total inventory value: ${total_value}&quot;)
+
+# Increase the price of items with quantity less than 15 by 10%.
+
+print(&quot;Updated Inventory Prices:&quot;)
+for item in inventory:
+  if item[&#39;quantity&#39;] &lt;= 15:
+    item[&quot;price&quot;] = item[&#39;price&#39;] * 1.10
+  print(f&quot;{item[&#39;item&#39;]}: ${round(item[&#39;price&#39;], 2)}&quot;)
+
+odd_numbers = [1,3,5,7,9]
+even_numbers = [2,4,6,8,10]
+
+numbers = odd_numbers + even_numbers
+
+numbers.sort(reverse=True)
+
+numbers.remove(5)
+
+print(f&quot;Final numbers list: {numbers}&quot;)
+
+words = [&#39;python&#39;, &#39;data&#39;, &#39;science&#39;, &#39;machine&#39;, &#39;learning&#39;, &#39;artificial&#39;, &#39;intelligence&#39;]
+
+word_lengths = [len(word) for word in words]
+
+longest_word = max(words, key=len)
+
+a_words = [word for word in words if word.startswith(&quot;a&quot;)]
+
+print(f&quot;Lengths of words: {word_lengths}&quot;)
+print(f&quot;Longest word: {longest_word}&quot;)
+print(f&quot;Words starting with &#39;a&#39;: {a_words}&quot;)
+
+matrix_a = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+
+matrix_b = [ [9, 8, 7], [6, 5, 4], [3, 2, 1] ]
+
+resulting_matrix = []
+for i in range(len(matrix_a)):
+  new_row = []
+  for j in range(len(matrix_a[i])):
+    new_row.append(matrix_a[i][j] + matrix_b[i][j])
+  resulting_matrix.append(new_row)
+
+print(&#39;Resulting Matrix:&#39;)
+for row in resulting_matrix:
+  print(row)</code></pre></details>
+          </details>
+          <a class="text-link" href="assets/notebooks/python-data-lab.ipynb" download>Download notebook <span aria-hidden="true">↓</span></a>
+        </div>
+      </article>
+        </div>
+        <p class="project-footnote">These are static presentations of Python coursework, not live API applications. Download a notebook and open it in Google Colab to inspect or run the code. Downloads contain selected source cells with saved outputs removed; results above come from the supplied notebooks and have not been rerun here.</p>
+      </section>
+    </main>
+    <footer class="site-footer"><p>Chigozirim Amaefule</p><p>Biomedical Engineering</p><a href="#main">Back to top ↑</a></footer>
+  </div>
+</body>
+</html>

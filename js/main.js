@@ -48,3 +48,25 @@ if (menuButton && navigation) {
   mobileLayout.addEventListener('change', syncMenuLayout);
   syncMenuLayout();
 }
+
+const projectFilter = document.querySelector('.project-filter');
+const projectCards = document.querySelectorAll('[data-project-category]');
+const projectCount = document.querySelector('#project-count');
+
+if (projectFilter && projectCards.length && projectCount) {
+  projectFilter.hidden = false;
+  projectFilter.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-filter]');
+    if (!button) return;
+    const category = button.dataset.filter;
+    let visibleCount = 0;
+    projectCards.forEach((card) => {
+      card.hidden = category !== 'all' && card.dataset.projectCategory !== category;
+      if (!card.hidden) visibleCount += 1;
+    });
+    projectFilter.querySelectorAll('button').forEach((control) => {
+      control.setAttribute('aria-pressed', String(control === button));
+    });
+    projectCount.textContent = `Showing ${visibleCount} of ${projectCards.length} projects`;
+  });
+}

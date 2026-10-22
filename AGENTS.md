@@ -10,6 +10,7 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 - Approved headline: "Exploring technology that supports the human body."
 - Personal content: I study Biomedical Engineering. My interests are video games (especially fighting games at the moment), rock music, and soccer.
 - Academic interests and goals: My interest in prosthetics drew me to Biomedical Engineering. After graduating, I would like to work in biomaterials development.
+- Approved project sources: two supplied Google Colab notebooks. Showcase Currency exchange tracker (API notebook, Project 2), News headline organizer (data manipulation notebook, Question 8), and Python data lab (data manipulation notebook, Questions 1-6). Describe these as three showcases from two class notebooks. Preserve original code in downloadable excerpts, remove saved outputs and metadata, and never publish the weather exercise's exposed credential. Distinguish recorded results from newly verified execution and summary graphics from screenshots.
 - `index.html`: Home, with a brief personal introduction and navigation.
 - `about.html`: About Me, including background, education, and interests.
 - `projects.html`: At least three projects, each with a description, image or screenshot, and a relevant link when available. Class projects count.
