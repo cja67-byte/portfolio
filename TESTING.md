@@ -1,5 +1,15 @@
 # Portfolio test plan
 
+## Accessibility source audit — October 22, 2026
+
+- **Pass — image descriptions:** All five displayed image instances across Home and Projects have nonempty, descriptive alt attributes. The other pages contain no images.
+- **Pass — image size:** Every image in assets/images is below 500 KB. The largest is biocompatibility.svg at 796 bytes.
+- **Pass — palette contrast calculation:** Black text against the defined opaque background colors ranges from 9.59:1 (orange) to 19.09:1 (light silver). This is a source-level calculation; rendered gradient contrast still needs browser inspection.
+- **Source review completed — keyboard support:** Native links, buttons, and disclosure controls are used. Every page has a skip link; links, buttons, and disclosure summaries have visible focus styles. Menu open/close, Escape focus return, and resizing previously passed isolated JavaScript checks. Actual Tab/Shift+Tab/Enter/Space navigation has not been tested in a browser.
+- **Not run — Lighthouse:** No connected browser was available. No Accessibility score is claimed.
+
+To finish, open each live page in Chrome, open DevTools > Lighthouse, select Accessibility, and run an audit for mobile and desktop. Record each actual score and fix/retest any page below 90. On each page, also use Tab and Shift+Tab to reach every control, Enter to follow links, Space/Enter to activate buttons and disclosures, and Escape to close the mobile menu. Verify focus is visible and never trapped. Opening an email draft is sufficient; do not send a message during testing.
+
 ## Contact and final navigation
 
 | ID | Testing | Steps | Expected result | Actual result |
