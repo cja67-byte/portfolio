@@ -8,7 +8,7 @@ Open `index.html` in a browser by double-clicking it. No installation or build s
 
 ## Current progress
 
-Home, About Me, and Projects are available. Projects presents three showcases from two supplied Google Colab notebooks: a currency exchange tracker, a news headline organizer, and a six-exercise Python data lab. Visitors can filter by category, expand project details and original code, and download source-only notebook excerpts. Home includes two selected project previews. Skills and Contact still need personal content and implementation.
+Home, About Me, and Projects are available. Projects presents two Python projects from supplied Google Colab notebooks (a currency exchange tracker and a news headline organizer) and a research paper on biocompatibility in prosthetics and implants. Visitors can filter by category, expand project details and original Python code, and download source-only notebook excerpts or the original Word research paper. Home includes two selected project previews. Skills and Contact still need personal content and implementation.
 
 ## Project sources and presentation
 
@@ -27,3 +27,5 @@ Configure GitHub Pages to publish from `main` and `/ (root)`.
 ## Credits
 
 Personal content supplied by Chigozirim Amaefule. Development assisted by Codex. Uses system fonts and CSS gradients, with no third-party assets or dependencies.
+
+The third showcase is Chigozirim Amaefule's ENG 102 research paper, dated April 1, 2025, from New Jersey Institute of Technology. It is presented as literature-based coursework, not experimental research. The unchanged original is available in assets/documents/. It replaces the Python data lab in the project collection.

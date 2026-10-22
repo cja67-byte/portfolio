@@ -42,8 +42,8 @@ Automated checks completed during implementation: local links and fragment targe
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T22 | Navigation | On Home, About, and Projects activate every header link; follow Home project previews, all-projects link, Projects hero link, and footer link. | All links reach the correct page or section; current page is indicated. | Not run |
-| T23 | Category filters | Choose APIs + databases, Data manipulation, then Show all. | Exactly 2, 1, then 3 projects appear; pressed state and count update. | Not run |
-| T24 | Details and downloads | Expand each project and code block; download each notebook. | Details open; code wraps; three valid source-only notebooks download. | Not run |
+| T23 | Category filters | Choose APIs + databases, Biomedical research, then Show all. | Exactly 2, 1, then 3 projects appear; pressed state and count update. | Not run |
+| T24 | Details and downloads | Expand each project and code block; download each notebook and the research paper. | Details open; code wraps; two valid source-only notebooks and the original Word paper download. | Not run |
 | T25 | Phone and laptop | Inspect Home and Projects at 320, 390, and 1366px, including expanded code. | Images, headings, filters, code, and navigation fit without horizontal overflow. | Not run |
 | T26 | Keyboard | Use Tab, Shift+Tab, Enter, Space, and Escape on Projects. | Skip link, menu, filters, details, and downloads work with visible focus. | Not run |
 | T27 | No JavaScript | Disable JavaScript and load Projects. | All projects, details, source, and downloads remain available; inactive filters are hidden. | Not run |
