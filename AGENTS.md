@@ -7,6 +7,7 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 
 ## Pages and content
 - Approved name: Chigozirim Amaefule.
+- Approved public contact email: cja67@njit.edu. Use a direct mailto link on Contact; no contact form is needed.
 - Approved headline: "Exploring technology that supports the human body."
 - Approved skills: Python and SQL are beginner skills currently being developed; SolidWorks and MATLAB experience is introductory. Technical and lab skills: CAD, mechanical tensile testing, biomaterial formulation, technical troubleshooting, Microsoft Office 365, data entry and reporting. Professional skills: sales management, client acquisition, team coordination, field operations, problem-solving, communication, adaptability. Languages: English (native), French (conversational, currently learning). Do not invent proficiency scores, certifications, employers, or years of experience.
 - Personal content: I study Biomedical Engineering. My interests are video games (especially fighting games at the moment), rock music, and soccer.

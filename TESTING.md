@@ -1,16 +1,27 @@
 # Portfolio test plan
 
+## Contact and final navigation
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T35 | All-page navigation | On each of the five pages, activate Home, About me, Projects, Skills, and Contact; also test Contact's wordmark, skip link, and Back to top. | Every link reaches its destination; only the current page is marked active. | Not run |
+| T36 | Contact email | Activate Email me and the displayed email address with mouse and keyboard. | The configured email app opens a draft to cja67@njit.edu; nothing is sent automatically. | Not run |
+| T37 | Contact responsive layout | Inspect Contact at 320px, 390px, and 1366px widths. | Email address, heading, and navigation fit without horizontal scrolling. | Not run |
+| T38 | Contact keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape at phone and laptop widths. | Skip link and visible focus work; menu opens and closes; links are operable. | Not run |
+| T39 | Contact accessibility and console | Run Lighthouse Accessibility and inspect the console while using the page. | Accessibility at least 90; no console errors. | Not run |
+| T40 | Contact live site | Repeat T35-T39 on GitHub Pages. | All pages, shared assets, and email links work on the live site. | Not run |
+
 Run the browser checks locally and repeat on the live GitHub Pages site. Record the URL, date, browser, viewport, actual outcome, and Pass or Fail. Preserve failed results and append retests after fixes. Browser and live-site checks below have not yet been run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Local opening | Double-click `index.html`. | Content, styles, and navigation load without a server. | Not run |
-| T2 | Home links | Activate the name, Home, About me, My interests, introduction link, and Back to top. | Each goes to the correct page or section. | Not run |
+| T2 | Home links | Activate the name, Home, About me, Contact, introduction link, and Back to top. | Each goes to the correct page or section. | Not run |
 | T3 | Phone layout | Inspect Home at 320px and 390px widths. | All text and controls fit; no horizontal scrolling. | Not run |
 | T4 | Laptop layout | Inspect Home at 1366px width. | Headline, section columns, and footer fit with readable spacing. | Not run |
 | T5 | Mobile menu | On a phone viewport, open and close Menu. | Links toggle and expanded state tracks visibility. | Not run |
 | T6 | Menu keyboard | Tab to Menu, press Enter, tab to a link, then press Escape. | Menu opens; links receive focus; Escape closes it and returns focus to Menu. | Not run |
-| T7 | Menu link selection | Open mobile menu and activate About me and My interests. | Menu closes; About me opens about.html and My interests reaches the local section with focus. | Not run |
+| T7 | Menu link selection | Open mobile menu and activate About me and Contact. | Menu closes; About me opens about.html and Contact opens contact.html. | Not run |
 | T8 | Resize behavior | Open the mobile menu, resize to laptop, then back to phone. | Desktop links remain visible; mobile menu returns to a closed state. | Not run |
 | T9 | Keyboard and skip link | Reload Home; navigate with Tab, Shift+Tab, and Enter. | Skip link appears on focus; all controls work with visible focus and no traps. | Not run |
 | T10 | No JavaScript | Disable JavaScript and reload Home. | Content and navigation remain available on phone and laptop. | Not run |
@@ -23,23 +34,23 @@ Run the browser checks locally and repeat on the live GitHub Pages site. Record 
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T15 | About links | Open about.html; activate the wordmark, Home, About me, My interests, My story, skip link, and Back to top. | Links reach the correct pages or sections; About me is marked as current. | Not run |
+| T15 | About links | Open about.html; activate the wordmark, Home, About me, Contact, My story, skip link, and Back to top. | Links reach the correct pages or sections; About me is marked as current. | Not run |
 | T16 | About phone layout | Inspect About at 320px and 390px widths. | Text and navigation fit without horizontal scrolling. | Not run |
 | T17 | About laptop layout | Inspect About at 1366px width. | Headline and section columns remain readable and fit. | Not run |
-| T18 | About keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape on About at phone and laptop widths; follow the My interests link from the mobile menu. | Skip link and visible focus work; menu opens and closes; focus reaches the interests section. | Not run |
+| T18 | About keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape on About at phone and laptop widths; follow the Contact link from the mobile menu. | Skip link and visible focus work; menu opens and closes; the Contact page opens. | Not run |
 | T19 | About accessibility | Run Lighthouse Accessibility on About. | Score is at least 90; resolve reported issues. | Not run |
 | T20 | About console and fallback | Exercise About with DevTools open, then reload with JavaScript disabled. | No console errors; navigation and content remain available without JavaScript. | Not run |
 | T21 | About live site | Repeat T15-T20 on the live GitHub Pages site. | Both pages and assets work under /portfolio/. | Not run |
 
 ## Coverage to add as pages are built
 
-For the Contact page, add cases covering every navigation link, phone and laptop layouts, keyboard navigation, and Lighthouse Accessibility. If a contact form is added, test valid and invalid input.
+All five pages now have test cases. Contact uses direct email links, so there is no form to validate.
 
 ## Skills page checks
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T30 | Skills navigation | Follow Skills from all four pages; activate its wordmark, Home, About me, Projects, Skills, My interests, project CTA, currency tracker link, skip link, and Back to top. | Every destination resolves; only Skills is marked current on Skills. | Not run |
+| T30 | Skills navigation | Follow Skills from all four pages; activate its wordmark, Home, About me, Projects, Skills, Contact, project CTA, currency tracker link, skip link, and Back to top. | Every destination resolves; only Skills is marked current on Skills. | Not run |
 | T31 | Skills responsive layout | Inspect at 320px, 390px, and 1366px widths. | Lists, heading, and navigation fit without horizontal scrolling. | Not run |
 | T32 | Skills keyboard and mobile menu | Use Tab, Shift+Tab, Enter, and Escape at mobile and laptop widths. | Visible focus, working skip link, operable menu, and no focus traps. | Not run |
 | T33 | Skills accessibility and console | Run Lighthouse Accessibility and exercise links with DevTools open. | Accessibility score at least 90; no console errors. | Not run |
