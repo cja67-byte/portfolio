@@ -97,6 +97,11 @@ h3 { font-size: 25px; font-weight: 500; letter-spacing: -.7px; margin: 0; }
 .project-footnote { max-width: 850px; font-size: 13px; margin: 32px 0 48px; }
 .home-projects { border-top: 1px solid var(--rule); padding: 48px 0; }
 .home-projects > .section-label { margin-bottom: 24px; }
+.skill-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; padding-left: 20px; margin: 0; }
+.skill-list li { padding-left: 4px; }
+@media (max-width: 480px) {
+  .skill-list { grid-template-columns: minmax(0, 1fr); }
+}
 @media (max-width: 759px) {
   .project-grid { grid-template-columns: minmax(0, 1fr); }
   .project-body { padding: 20px; }

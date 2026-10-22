@@ -33,7 +33,17 @@ Run the browser checks locally and repeat on the live GitHub Pages site. Record 
 
 ## Coverage to add as pages are built
 
-For each Skills and Contact page, add cases covering every navigation link, phone and laptop layouts, keyboard navigation, and Lighthouse Accessibility. If a contact form is added, test valid and invalid input.
+For the Contact page, add cases covering every navigation link, phone and laptop layouts, keyboard navigation, and Lighthouse Accessibility. If a contact form is added, test valid and invalid input.
+
+## Skills page checks
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T30 | Skills navigation | Follow Skills from all four pages; activate its wordmark, Home, About me, Projects, Skills, My interests, project CTA, currency tracker link, skip link, and Back to top. | Every destination resolves; only Skills is marked current on Skills. | Not run |
+| T31 | Skills responsive layout | Inspect at 320px, 390px, and 1366px widths. | Lists, heading, and navigation fit without horizontal scrolling. | Not run |
+| T32 | Skills keyboard and mobile menu | Use Tab, Shift+Tab, Enter, and Escape at mobile and laptop widths. | Visible focus, working skip link, operable menu, and no focus traps. | Not run |
+| T33 | Skills accessibility and console | Run Lighthouse Accessibility and exercise links with DevTools open. | Accessibility score at least 90; no console errors. | Not run |
+| T34 | Skills live site | Repeat T30-T33 on GitHub Pages. | Links and shared assets work under /portfolio/. | Not run |
 
 ## Projects and updated Home checks
 

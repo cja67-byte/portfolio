@@ -8,7 +8,7 @@ Open `index.html` in a browser by double-clicking it. No installation or build s
 
 ## Current progress
 
-Home, About Me, and Projects are available. Projects presents two Python projects from supplied Google Colab notebooks (a currency exchange tracker and a news headline organizer) and a research paper on biocompatibility in prosthetics and implants. Visitors can filter by category, expand project details and original Python code, and download source-only notebook excerpts or the original Word research paper. Home includes two selected project previews. Skills and Contact still need personal content and implementation.
+Home, About Me, Projects, and Skills are available. Projects presents two Python projects from supplied Google Colab notebooks (a currency exchange tracker and a news headline organizer) and a research paper on biocompatibility in prosthetics and implants. Visitors can filter by category, expand project details and original Python code, and download source-only notebook excerpts or the original Word research paper. Home includes two selected project previews. Skills covers developing Python and SQL knowledge, introductory SolidWorks and MATLAB experience, technical and lab skills, professional skills, and languages. Contact still needs public contact details and implementation.
 
 ## Project sources and presentation
 
