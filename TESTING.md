@@ -10,7 +10,7 @@ Run the browser checks locally and repeat on the live GitHub Pages site. Record 
 | T4 | Laptop layout | Inspect Home at 1366px width. | Headline, section columns, and footer fit with readable spacing. | Not run |
 | T5 | Mobile menu | On a phone viewport, open and close Menu. | Links toggle and expanded state tracks visibility. | Not run |
 | T6 | Menu keyboard | Tab to Menu, press Enter, tab to a link, then press Escape. | Menu opens; links receive focus; Escape closes it and returns focus to Menu. | Not run |
-| T7 | Menu link selection | Open mobile menu and activate About me and My interests. | Menu closes; destination section is reached and receives focus. | Not run |
+| T7 | Menu link selection | Open mobile menu and activate About me and My interests. | Menu closes; About me opens about.html and My interests reaches the local section with focus. | Not run |
 | T8 | Resize behavior | Open the mobile menu, resize to laptop, then back to phone. | Desktop links remain visible; mobile menu returns to a closed state. | Not run |
 | T9 | Keyboard and skip link | Reload Home; navigate with Tab, Shift+Tab, and Enter. | Skip link appears on focus; all controls work with visible focus and no traps. | Not run |
 | T10 | No JavaScript | Disable JavaScript and reload Home. | Content and navigation remain available on phone and laptop. | Not run |
@@ -19,6 +19,18 @@ Run the browser checks locally and repeat on the live GitHub Pages site. Record 
 | T13 | Console | Open DevTools and exercise Home interactions. | No JavaScript errors or failed asset loads. | Not run |
 | T14 | Live deployment | Repeat T2–T13 at the verified GitHub Pages URL. | Links, assets, responsive behavior, and accessibility work under `/portfolio/`. | Not run |
 
+## About page checks
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T15 | About links | Open about.html; activate the wordmark, Home, About me, My interests, My story, skip link, and Back to top. | Links reach the correct pages or sections; About me is marked as current. | Not run |
+| T16 | About phone layout | Inspect About at 320px and 390px widths. | Text and navigation fit without horizontal scrolling. | Not run |
+| T17 | About laptop layout | Inspect About at 1366px width. | Headline and section columns remain readable and fit. | Not run |
+| T18 | About keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape on About at phone and laptop widths; follow the My interests link from the mobile menu. | Skip link and visible focus work; menu opens and closes; focus reaches the interests section. | Not run |
+| T19 | About accessibility | Run Lighthouse Accessibility on About. | Score is at least 90; resolve reported issues. | Not run |
+| T20 | About console and fallback | Exercise About with DevTools open, then reload with JavaScript disabled. | No console errors; navigation and content remain available without JavaScript. | Not run |
+| T21 | About live site | Repeat T15-T20 on the live GitHub Pages site. | Both pages and assets work under /portfolio/. | Not run |
+
 ## Coverage to add as pages are built
 
-For each About, Projects, Skills, and Contact page, add cases covering every navigation link, phone and laptop layouts, keyboard navigation, and Lighthouse Accessibility. Add tests for all project filter categories and Show all. If a contact form is added, test valid and invalid input. These features are outside the current Home page implementation.
+For each Projects, Skills, and Contact page, add cases covering every navigation link, phone and laptop layouts, keyboard navigation, and Lighthouse Accessibility. Add tests for all project filter categories and Show all. If a contact form is added, test valid and invalid input. These features are outside the current Home and About implementation.

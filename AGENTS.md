@@ -8,7 +8,8 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 ## Pages and content
 - Approved name: Chigozirim Amaefule.
 - Approved headline: "Exploring technology that supports the human body."
-- Personal content: I study Biomedical Engineering Technology (BMET). My interests are video games (especially fighting games at the moment), rock music, and soccer.
+- Personal content: I study Biomedical Engineering. My interests are video games (especially fighting games at the moment), rock music, and soccer.
+- Academic interests and goals: My interest in prosthetics drew me to Biomedical Engineering. After graduating, I would like to work in biomaterials development.
 - `index.html`: Home, with a brief personal introduction and navigation.
 - `about.html`: About Me, including background, education, and interests.
 - `projects.html`: At least three projects, each with a description, image or screenshot, and a relevant link when available. Class projects count.

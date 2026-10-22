@@ -1,6 +1,6 @@
 # Chigozirim Amaefule | Personal portfolio
 
-A personal portfolio for a Biomedical Engineering Technology (BMET) student, built with plain HTML, CSS, and JavaScript. The design uses a metallic-silver and orange background with black text.
+A personal portfolio for a Biomedical Engineering student, built with plain HTML, CSS, and JavaScript. The design uses a metallic-silver and orange background with black text.
 
 ## View locally
 
@@ -8,7 +8,7 @@ Open `index.html` in a browser by double-clicking it. No installation or build s
 
 ## Current progress
 
-The Home page includes the approved headline, introduction, studies, interests, and responsive keyboard-accessible navigation. Navigation currently points to Home page sections. The separate About, Projects, Skills, and Contact pages will be added in later tasks; project descriptions, screenshots, skills, and public contact details still need to be supplied.
+The Home page includes the approved headline, introduction, studies, interests, and responsive keyboard-accessible navigation. The About Me page covers my interest in prosthetics and goal of working in biomaterials development. Both pages link to each other and to their interests sections. Projects, Skills, and Contact pages will be added in later tasks; project descriptions, screenshots, skills, and public contact details still need to be supplied.
 
 ## Deployment
 
