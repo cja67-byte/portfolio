@@ -26,6 +26,7 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 - Style: airy, polished, and easy to read, with generous whitespace, restrained decoration, and simple project previews.
 - Colors: a metallic-silver and orange background with black text (`#000000`). Suggested background tones are light silver (`#ececec`), silver (`#c0c0c0`), and orange (`#f59a45`). Create a subtle metallic effect with static CSS gradients and broad orange areas. Keep the background behind text light enough for clear contrast throughout the gradient.
 - No separate accent colors or colored heading phrases. Orange is part of the background palette. Use black text, underlines, borders, and spacing to distinguish links, buttons, active navigation, and keyboard focus.
+- On desktop screens at least 1024px wide, the orange background glow begins fading in around the horizontal midpoint and strengthens toward the right edge. Preserve the existing phone gradient. Size the desktop glow relative to the viewport so long pages do not stretch it.
 - Fonts: a local system font stack such as `system-ui, -apple-system, "Segoe UI", sans-serif`; no external font dependency.
 - Typography: large, left-aligned sans-serif headings, readable body text, and small secondary labels, all in black. Scale headings down on phones.
 - Header: my name or wordmark on the left, simple navigation on the right, and a thin divider below. Use the responsive menu on phones.
