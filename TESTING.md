@@ -1,5 +1,80 @@
 # Portfolio test plan
 
+Updated October 26, 2026. This plan covers Home, About Me, Projects, Skills, and Contact. Test IDs have been reorganized into a single sequence for the completed five-page site; the earlier source audit is preserved below.
+
+## How to run and record tests
+
+- Run locally first, then repeat every applicable test on the live GitHub Pages site. Intended live base URL: https://cja67-byte.github.io/portfolio/ (verify that deployment is available before testing).
+- Use Chrome and record its version, test date, tested commit, URL, and viewport in the execution log below.
+- Phone viewports: 320 x 740 and 390 x 844. Laptop viewport: 1366 x 768. Chrome DevTools device emulation can be used; record whether a real device or emulation was used.
+- Replace `Not run` with **Pass** or **Fail** only after executing the full case, and add the observed behavior or score. If a case has multiple viewports or controls, all must meet the expected result to pass.
+- For failures, record the original failure, the fix/commit, and a new retest entry. Do not overwrite the failure history. Keep local and live results separate in the execution log.
+- The final results must include live-site testing, not just source checks or local preview. A source audit or JavaScript stub test does not establish a browser test result.
+
+## Test cases
+
+Each navigation case requires testing **all five header links** (Home, About me, Projects, Skills, Contact) from the named starting page. Return to that page before testing each next link. Repeat with the mobile menu open and at laptop width. Also test the wordmark and Back to top link.
+
+For keyboard cases, start with a fresh reload and use only Tab, Shift+Tab, Enter, Space, and Escape. Test both phone and laptop layouts, including the skip link, every navigation link, every page-specific control, and the footer. Open an email draft only; do not send it.
+
+For Lighthouse cases, open the named live page in Chrome DevTools, select Lighthouse and Accessibility, then run mobile and desktop audits. Record both actual scores and save the report. Fix issues and rerun if either score is below 90.
+
+| Test ID | What is being tested | Steps to run the test | Expected result | Actual result (Pass or Fail after execution) |
+| --- | --- | --- | --- | --- |
+| T1 | Home navigation | Open index.html; follow the full navigation procedure above, returning before each link. | All five page links, the wordmark, and Back to top work; only the current page is marked active. | Not run |
+| T2 | About Me navigation | Open about.html; follow the full navigation procedure above, returning before each link. | All five page links, the wordmark, and Back to top work; only the current page is marked active. | Not run |
+| T3 | Projects navigation | Open projects.html; follow the full navigation procedure above, returning before each link. | All five page links, the wordmark, and Back to top work; only the current page is marked active. | Not run |
+| T4 | Skills navigation | Open skills.html; follow the full navigation procedure above, returning before each link. | All five page links, the wordmark, and Back to top work; only the current page is marked active. | Not run |
+| T5 | Contact navigation | Open contact.html; follow the full navigation procedure above, returning before each link. | All five page links, the wordmark, and Back to top work; only the current page is marked active. | Not run |
+| T6 | Home phone layout | Open index.html at both phone sizes; scroll the whole page, open Menu, and expand any project details. | No horizontal scrolling, overlap, or clipped content; controls are usable and text/images fit. | Not run |
+| T7 | About Me phone layout | Open about.html at both phone sizes; scroll the whole page, open Menu, and expand any project details. | No horizontal scrolling, overlap, or clipped content; controls are usable and text/images fit. | Not run |
+| T8 | Projects phone layout | Open projects.html at both phone sizes; scroll the whole page, open Menu, and expand any project details. | No horizontal scrolling, overlap, or clipped content; controls are usable and text/images fit. | Not run |
+| T9 | Skills phone layout | Open skills.html at both phone sizes; scroll the whole page, open Menu, and expand any project details. | No horizontal scrolling, overlap, or clipped content; controls are usable and text/images fit. | Not run |
+| T10 | Contact phone layout | Open contact.html at both phone sizes; scroll the whole page, open Menu, and expand any project details. | No horizontal scrolling, overlap, or clipped content; controls are usable and text/images fit. | Not run |
+| T11 | Home laptop layout | Open index.html at 1366 x 768; inspect the whole page, including footer and expanded details where present. | Navigation is visible; columns, typography, images, and spacing remain readable without overflow. | Not run |
+| T12 | About Me laptop layout | Open about.html at 1366 x 768; inspect the whole page, including footer and expanded details where present. | Navigation is visible; columns, typography, images, and spacing remain readable without overflow. | Not run |
+| T13 | Projects laptop layout | Open projects.html at 1366 x 768; inspect the whole page, including footer and expanded details where present. | Navigation is visible; columns, typography, images, and spacing remain readable without overflow. | Not run |
+| T14 | Skills laptop layout | Open skills.html at 1366 x 768; inspect the whole page, including footer and expanded details where present. | Navigation is visible; columns, typography, images, and spacing remain readable without overflow. | Not run |
+| T15 | Contact laptop layout | Open contact.html at 1366 x 768; inspect the whole page, including footer and expanded details where present. | Navigation is visible; columns, typography, images, and spacing remain readable without overflow. | Not run |
+| T16 | Home keyboard navigation | Open index.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
+| T17 | About Me keyboard navigation | Open about.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
+| T18 | Projects keyboard navigation | Open projects.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
+| T19 | Skills keyboard navigation | Open skills.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
+| T20 | Contact keyboard navigation | Open contact.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
+| T21 | Home Lighthouse Accessibility | Open index.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T22 | About Me Lighthouse Accessibility | Open about.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T23 | Projects Lighthouse Accessibility | Open projects.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T24 | Skills Lighthouse Accessibility | Open skills.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T25 | Contact Lighthouse Accessibility | Open contact.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T26 | Mobile menu on every page | On each page at phone width, click Menu twice, reopen it, then select another page. Inspect aria-expanded in DevTools. | First click opens all five links; second closes them; expanded state matches visibility; navigation reaches the selected page. | Not run |
+| T27 | Menu resizing on every page | On each page, open the phone menu; resize to laptop, then back to phone. | Desktop navigation remains visible and Menu is hidden; returning to phone resets to a closed menu with aria-expanded=false. | Not run |
+| T28 | API project filter | Open Projects; select APIs + databases using mouse, then repeat with keyboard. | Only Currency exchange tracker and News headline organizer appear; count is 2 of 3 and only the selected filter has aria-pressed=true. | Not run |
+| T29 | Research project filter | On Projects, select Biomedical research using mouse, then keyboard. | Only the biocompatibility paper appears; count is 1 of 3 and selected state updates. | Not run |
+| T30 | Show all and repeated filtering | Switch between both categories, then Show all, several times. | All three projects return; count is 3 of 3; no duplicated cards, stale state, or keyboard focus loss. | Not run |
+| T31 | Project details and code | Expand and collapse all three Explore the project controls; expand both Python code disclosures with mouse and keyboard. | Correct details are shown; code is readable and wraps without horizontal page overflow. | Not run |
+| T32 | Project downloads | Download both Python notebooks and the Word paper. Open notebooks in Colab and the paper in Word or another compatible reader. No API execution is needed. | All three files download and open; notebook excerpts contain source without saved outputs; paper displays the supplied research project. | Not run |
+| T33 | Home content links | Activate Explore my projects, Beyond my studies, both project preview links, and View all three projects; return between checks. | Links reach Projects, Home interests, the matching project cards, and the full project collection respectively. | Not run |
+| T34 | About and Skills content links | On About, activate My story. On Skills, activate See my class projects and the currency tracker link. | About scrolls to studies; Skills links reach Projects and the currency tracker card. | Not run |
+| T35 | Contact email links | Activate Email me and the visible email address with mouse and Enter. | Both open the configured email app with cja67@njit.edu as recipient; no message is sent automatically. | Not run |
+| T36 | JavaScript-disabled fallback | Disable JavaScript; reload each page at phone and laptop widths. On Projects, inspect details and downloads. Restore JavaScript afterward. | All content and navigation remain usable; filters are hidden and all three projects are visible; native disclosures and downloads still work. | Not run |
+| T37 | Reduced motion | Enable reduced-motion emulation; follow My story, Beyond my studies, and Back to top links. Restore normal settings afterward. | Section navigation works without animated smooth scrolling. | Not run |
+| T38 | Browser console and assets | On every page, open Console and Network; reload, operate the menu, and exercise all page-specific features. | No JavaScript errors, missing images, or failed stylesheet/script requests. | Not run |
+| T39 | Images and rendered contrast | Inspect every displayed image's alt attribute and file size. Review text and focus indicators across gradients and project surfaces at both viewport sizes. | Descriptive alt text; each image under 500 KB; readable text (at least 4.5:1 for normal text) and visible keyboard focus throughout. | Not run |
+| T40 | Local file opening | Double-click index.html; visit every page and use navigation, filters, details, and downloads without a server. | Styles, scripts, links, and downloads work using relative paths. | Not run |
+
+Contact uses email links, not a form. Valid/invalid form-input testing is therefore not applicable. The JavaScript features are responsive navigation (T26-T27, plus keyboard cases) and project filters (T28-T30).
+
+## Execution and retest log
+
+No browser or live-site executions are recorded yet. Add a row for each test run, including repeat runs after fixes. T40 is local-only; record live results for all other cases.
+
+| Date | Test ID | Commit | URL / local path | Browser version / device | Viewport | Observed result / Lighthouse scores | Pass or Fail | Fix and retest reference |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+## Earlier verification evidence
+
+Earlier source checks confirmed relative links, one h1 per page, current-page indicators, and valid download files. The original research-paper copy was verified byte-for-byte. Isolated JavaScript checks confirmed menu state transitions and project filtering for two API projects, one research project, and all three projects. These are not browser or Lighthouse results and do not mark the cases above as passed.
+
 ## Accessibility source audit — October 22, 2026
 
 - **Pass — image descriptions:** All five displayed image instances across Home and Projects have nonempty, descriptive alt attributes. The other pages contain no images.
@@ -9,74 +84,3 @@
 - **Not run — Lighthouse:** No connected browser was available. No Accessibility score is claimed.
 
 To finish, open each live page in Chrome, open DevTools > Lighthouse, select Accessibility, and run an audit for mobile and desktop. Record each actual score and fix/retest any page below 90. On each page, also use Tab and Shift+Tab to reach every control, Enter to follow links, Space/Enter to activate buttons and disclosures, and Escape to close the mobile menu. Verify focus is visible and never trapped. Opening an email draft is sufficient; do not send a message during testing.
-
-## Contact and final navigation
-
-| ID | Testing | Steps | Expected result | Actual result |
-| --- | --- | --- | --- | --- |
-| T35 | All-page navigation | On each of the five pages, activate Home, About me, Projects, Skills, and Contact; also test Contact's wordmark, skip link, and Back to top. | Every link reaches its destination; only the current page is marked active. | Not run |
-| T36 | Contact email | Activate Email me and the displayed email address with mouse and keyboard. | The configured email app opens a draft to cja67@njit.edu; nothing is sent automatically. | Not run |
-| T37 | Contact responsive layout | Inspect Contact at 320px, 390px, and 1366px widths. | Email address, heading, and navigation fit without horizontal scrolling. | Not run |
-| T38 | Contact keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape at phone and laptop widths. | Skip link and visible focus work; menu opens and closes; links are operable. | Not run |
-| T39 | Contact accessibility and console | Run Lighthouse Accessibility and inspect the console while using the page. | Accessibility at least 90; no console errors. | Not run |
-| T40 | Contact live site | Repeat T35-T39 on GitHub Pages. | All pages, shared assets, and email links work on the live site. | Not run |
-
-Run the browser checks locally and repeat on the live GitHub Pages site. Record the URL, date, browser, viewport, actual outcome, and Pass or Fail. Preserve failed results and append retests after fixes. Browser and live-site checks below have not yet been run.
-
-| ID | Testing | Steps | Expected result | Actual result |
-| --- | --- | --- | --- | --- |
-| T1 | Local opening | Double-click `index.html`. | Content, styles, and navigation load without a server. | Not run |
-| T2 | Home links | Activate the name, Home, About me, Contact, introduction link, and Back to top. | Each goes to the correct page or section. | Not run |
-| T3 | Phone layout | Inspect Home at 320px and 390px widths. | All text and controls fit; no horizontal scrolling. | Not run |
-| T4 | Laptop layout | Inspect Home at 1366px width. | Headline, section columns, and footer fit with readable spacing. | Not run |
-| T5 | Mobile menu | On a phone viewport, open and close Menu. | Links toggle and expanded state tracks visibility. | Not run |
-| T6 | Menu keyboard | Tab to Menu, press Enter, tab to a link, then press Escape. | Menu opens; links receive focus; Escape closes it and returns focus to Menu. | Not run |
-| T7 | Menu link selection | Open mobile menu and activate About me and Contact. | Menu closes; About me opens about.html and Contact opens contact.html. | Not run |
-| T8 | Resize behavior | Open the mobile menu, resize to laptop, then back to phone. | Desktop links remain visible; mobile menu returns to a closed state. | Not run |
-| T9 | Keyboard and skip link | Reload Home; navigate with Tab, Shift+Tab, and Enter. | Skip link appears on focus; all controls work with visible focus and no traps. | Not run |
-| T10 | No JavaScript | Disable JavaScript and reload Home. | Content and navigation remain available on phone and laptop. | Not run |
-| T11 | Reduced motion | Enable reduced motion and follow a section link. | Scrolling is immediate rather than animated. | Not run |
-| T12 | Accessibility | Run Chrome Lighthouse Accessibility on Home. | Score is at least 90; review and resolve reported issues. | Not run |
-| T13 | Console | Open DevTools and exercise Home interactions. | No JavaScript errors or failed asset loads. | Not run |
-| T14 | Live deployment | Repeat T2–T13 at the verified GitHub Pages URL. | Links, assets, responsive behavior, and accessibility work under `/portfolio/`. | Not run |
-
-## About page checks
-
-| ID | Testing | Steps | Expected result | Actual result |
-| --- | --- | --- | --- | --- |
-| T15 | About links | Open about.html; activate the wordmark, Home, About me, Contact, My story, skip link, and Back to top. | Links reach the correct pages or sections; About me is marked as current. | Not run |
-| T16 | About phone layout | Inspect About at 320px and 390px widths. | Text and navigation fit without horizontal scrolling. | Not run |
-| T17 | About laptop layout | Inspect About at 1366px width. | Headline and section columns remain readable and fit. | Not run |
-| T18 | About keyboard and menu | Use Tab, Shift+Tab, Enter, and Escape on About at phone and laptop widths; follow the Contact link from the mobile menu. | Skip link and visible focus work; menu opens and closes; the Contact page opens. | Not run |
-| T19 | About accessibility | Run Lighthouse Accessibility on About. | Score is at least 90; resolve reported issues. | Not run |
-| T20 | About console and fallback | Exercise About with DevTools open, then reload with JavaScript disabled. | No console errors; navigation and content remain available without JavaScript. | Not run |
-| T21 | About live site | Repeat T15-T20 on the live GitHub Pages site. | Both pages and assets work under /portfolio/. | Not run |
-
-## Coverage to add as pages are built
-
-All five pages now have test cases. Contact uses direct email links, so there is no form to validate.
-
-## Skills page checks
-
-| ID | Testing | Steps | Expected result | Actual result |
-| --- | --- | --- | --- | --- |
-| T30 | Skills navigation | Follow Skills from all four pages; activate its wordmark, Home, About me, Projects, Skills, Contact, project CTA, currency tracker link, skip link, and Back to top. | Every destination resolves; only Skills is marked current on Skills. | Not run |
-| T31 | Skills responsive layout | Inspect at 320px, 390px, and 1366px widths. | Lists, heading, and navigation fit without horizontal scrolling. | Not run |
-| T32 | Skills keyboard and mobile menu | Use Tab, Shift+Tab, Enter, and Escape at mobile and laptop widths. | Visible focus, working skip link, operable menu, and no focus traps. | Not run |
-| T33 | Skills accessibility and console | Run Lighthouse Accessibility and exercise links with DevTools open. | Accessibility score at least 90; no console errors. | Not run |
-| T34 | Skills live site | Repeat T30-T33 on GitHub Pages. | Links and shared assets work under /portfolio/. | Not run |
-
-## Projects and updated Home checks
-
-Automated checks completed during implementation: local links and fragment targets resolve on all three pages; each page has one h1; all three notebook excerpts parse and contain no saved outputs; SVGs parse and are under 500 KB; the exposed source credential is absent from public files. JavaScript syntax and category transitions (2 API, 1 data, 3 total) passed in an isolated DOM stub. This does not replace the browser checks below. No browser was connected, so visual, keyboard, live-site, and Lighthouse checks remain unrun.
-
-| ID | Testing | Steps | Expected result | Actual result |
-| --- | --- | --- | --- | --- |
-| T22 | Navigation | On Home, About, and Projects activate every header link; follow Home project previews, all-projects link, Projects hero link, and footer link. | All links reach the correct page or section; current page is indicated. | Not run |
-| T23 | Category filters | Choose APIs + databases, Biomedical research, then Show all. | Exactly 2, 1, then 3 projects appear; pressed state and count update. | Not run |
-| T24 | Details and downloads | Expand each project and code block; download each notebook and the research paper. | Details open; code wraps; two valid source-only notebooks and the original Word paper download. | Not run |
-| T25 | Phone and laptop | Inspect Home and Projects at 320, 390, and 1366px, including expanded code. | Images, headings, filters, code, and navigation fit without horizontal overflow. | Not run |
-| T26 | Keyboard | Use Tab, Shift+Tab, Enter, Space, and Escape on Projects. | Skip link, menu, filters, details, and downloads work with visible focus. | Not run |
-| T27 | No JavaScript | Disable JavaScript and load Projects. | All projects, details, source, and downloads remain available; inactive filters are hidden. | Not run |
-| T28 | Console and accessibility | Exercise Projects and run Lighthouse Accessibility on all three pages. | No console errors; Accessibility is at least 90 on each page. | Not run |
-| T29 | Live site | Repeat T22-T28 on GitHub Pages. | Navigation, relative assets, and notebook downloads work under /portfolio/. | Not run |
