@@ -91,6 +91,14 @@ Report timestamp: `2026-10-29T17:54:23.982Z`. The report includes unused mobile 
 
 ## Earlier verification evidence
 
+### Live availability check — October 29, 2026
+
+| Test ID | What is being tested | Steps to run the test | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T41 | Live page availability | Request index.html, about.html, projects.html, skills.html, and contact.html from https://cja67-byte.github.io/portfolio/ and inspect each HTTP response. | Every page returns HTTP 200. | Pass — all five returned HTTP 200 using PowerShell Invoke-WebRequest on October 29, 2026. |
+
+No browser was connected for this availability check. This result does not establish keyboard usability, responsive layout, or Lighthouse scores. Existing results above are preserved. Complete remaining browser cases on the live site and record failures, fixes, and retests separately.
+
 Earlier source checks confirmed relative links, one h1 per page, current-page indicators, and valid download files. The original research-paper copy was verified byte-for-byte. Isolated JavaScript checks confirmed menu state transitions and project filtering for two API projects, one research project, and all three projects. These are not browser or Lighthouse results and do not mark the cases above as passed.
 
 ## Accessibility source audit — October 22, 2026
