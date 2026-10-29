@@ -1,6 +1,21 @@
 # Portfolio test plan
 
-Updated October 26, 2026. This plan covers Home, About Me, Projects, Skills, and Contact. Test IDs have been reorganized into a single sequence for the completed five-page site; the earlier source audit is preserved below.
+Updated October 29, 2026. This plan covers Home, About Me, Projects, Skills, and Contact. Test IDs have been reorganized into a single sequence for the completed five-page site; the earlier source audit is preserved below.
+
+The plan contains 40 test cases. Execution is incomplete: the supplied live Projects Lighthouse report establishes a desktop Accessibility pass only. Other results remain unrun until evidence is recorded.
+
+## Assignment coverage
+
+| Requirement | Test cases |
+| --- | --- |
+| Every navigation link on every page | T1-T5 |
+| Every page at phone and laptop sizes | T6-T15 |
+| Keyboard navigation on every page | T16-T20 |
+| Lighthouse Accessibility on every page | T21-T25 |
+| Every JavaScript feature: mobile menu and category filters | T26-T30 |
+| Live GitHub Pages testing and failure/retest history | Execution and retest log below; record local and live runs separately |
+
+Each case includes an ID, testing subject, steps, expected result, and actual-result field. Unrun cases are not passes. Form validation is not applicable because Contact uses email links.
 
 ## How to run and record tests
 
@@ -43,7 +58,7 @@ For Lighthouse cases, open the named live page in Chrome DevTools, select Lighth
 | T20 | Contact keyboard navigation | Open contact.html; follow the keyboard procedure above through every control. | Logical focus order, visible focus, working skip link and controls, no focus trap; Escape closes the mobile menu and returns focus to Menu. | Not run |
 | T21 | Home Lighthouse Accessibility | Open index.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
 | T22 | About Me Lighthouse Accessibility | Open about.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
-| T23 | Projects Lighthouse Accessibility | Open projects.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
+| T23 | Projects Lighthouse Accessibility | Open projects.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Live desktop: Pass, 100/100 (October 29, 2026, supplied report). Mobile: Not run. Local: Not run. Full case incomplete. |
 | T24 | Skills Lighthouse Accessibility | Open skills.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
 | T25 | Contact Lighthouse Accessibility | Open contact.html; run the mobile and desktop Lighthouse procedure above. Record both scores. | Accessibility score is at least 90 in both modes; identified issues are reviewed. | Not run |
 | T26 | Mobile menu on every page | On each page at phone width, click Menu twice, reopen it, then select another page. Inspect aria-expanded in DevTools. | First click opens all five links; second closes them; expanded state matches visibility; navigation reaches the selected page. | Not run |
@@ -66,10 +81,13 @@ Contact uses email links, not a form. Valid/invalid form-input testing is theref
 
 ## Execution and retest log
 
-No browser or live-site executions are recorded yet. Add a row for each test run, including repeat runs after fixes. T40 is local-only; record live results for all other cases.
+The user-supplied Lighthouse report is recorded below. Add a row for each further test run, including repeat runs after fixes. T40 is local-only; record live results for all other cases. A pass for one mode does not establish a pass for the other mode or for manual keyboard and layout tests.
 
 | Date | Test ID | Commit | URL / local path | Browser version / device | Viewport | Observed result / Lighthouse scores | Pass or Fail | Fix and retest reference |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| October 29, 2026, 1:54 p.m. EDT | T23, live desktop portion | Not identified in supplied report | https://cja67-byte.github.io/portfolio/projects.html | Chrome 156.0.0.0; Lighthouse 13.5.0; user-supplied JSON | Actual viewport not established; formFactor=desktop; screen emulation disabled | Accessibility 100; Performance 100; Best Practices 100; SEO 100. FCP/LCP approximately 0.3 s; TBT 0 ms; CLS 0. | Pass (desktop Lighthouse portion only) | No failed run supplied. Mobile audit and manual checks remain Not run. |
+
+Report timestamp: `2026-10-29T17:54:23.982Z`. The report includes unused mobile screen-emulation dimensions, but `screenEmulation.disabled` is true; those dimensions are not evidence of a phone test. Manual accessibility checks are not established by the automated score. The historical October 22 notes below describe the evidence available on that date.
 
 ## Earlier verification evidence
 
