@@ -2,7 +2,7 @@
 
 Updated October 29, 2026. This plan covers Home, About Me, Projects, Skills, and Contact. Test IDs have been reorganized into a single sequence for the completed five-page site; the earlier source audit is preserved below.
 
-The plan contains 40 test cases. Execution is incomplete: the supplied live Projects Lighthouse report establishes a desktop Accessibility pass only. Other results remain unrun until evidence is recorded.
+The plan contains 40 primary test cases and the additional T41 availability check. Execution is incomplete: the supplied live Projects Lighthouse report establishes a desktop Accessibility pass only. A subsequent live HTTP/source run passed 138 checks, but these do not establish full browser-case passes.
 
 ## Assignment coverage
 
@@ -80,6 +80,19 @@ For Lighthouse cases, open the named live page in Chrome DevTools, select Lighth
 Contact uses email links, not a form. Valid/invalid form-input testing is therefore not applicable. The JavaScript features are responsive navigation (T26-T27, plus keyboard cases) and project filters (T28-T30).
 
 ## Execution and retest log
+
+### Attempt to execute the full suite — October 29, 2026
+
+Windows computer-use discovery found the existing Chrome window on the live Projects page. Its accessibility tree could be read and DevTools opened, but screenshot capture repeatedly failed with `FrameArrived timed out` / `window capture timed out`; clicking failed with `coordinate input geometry is unavailable`. No successful filter activation or new Lighthouse run was verified. Consequently, full navigation, viewport, keyboard, mouse, visual-contrast, and Lighthouse cases remain incomplete rather than being marked Pass or website Fail.
+
+The live HTTP/source checks below were executed instead where possible. They are partial evidence for T1-T5, T32-T35, T38-T39 and full evidence for T41, not substitutes for their browser steps.
+
+| Run | Method and scope | Actual result | Retest or limitation |
+| --- | --- | --- | --- |
+| Initial HTTP/source run | PowerShell requests for all five live pages and referenced resources; HTML, image, notebook, and Word-download checks | 136 of 138 checks passed; two notebook-parser checks failed | Test-harness error: binary notebook response bodies were not decoded as UTF-8 before JSON parsing. No site defect established. Original results retained in test-evidence/live-http-checks-initial.json. |
+| Corrected HTTP/source run | Same checks after adding UTF-8 decoding for binary notebook responses | Pass: 138 of 138 checks | All five pages and referenced assets returned HTTP 200; navigation targets and fragments exist; image alt text and sizes pass; both notebooks parse without saved outputs; live Word download matches the repository copy byte-for-byte. Results in test-evidence/live-http-checks.json. |
+
+These runs did not measure viewports, inspect rendered text/focus contrast, open downloaded files in Colab/Word, launch the email app, inspect browser runtime errors, or execute new Lighthouse audits. Resume the browser cases when reliable capture and input are available. Preserve the previously supplied Lighthouse result below.
 
 The user-supplied Lighthouse report is recorded below. Add a row for each further test run, including repeat runs after fixes. T40 is local-only; record live results for all other cases. A pass for one mode does not establish a pass for the other mode or for manual keyboard and layout tests.
 

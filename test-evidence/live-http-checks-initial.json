@@ -1,0 +1,703 @@
+{
+    "date":  "2026-10-29",
+    "baseUrl":  "https://cja67-byte.github.io/portfolio/",
+    "method":  "PowerShell HTTP requests and source parsing, not browser automation",
+    "checks":  [
+                   {
+                       "check":  "index.html HTTP",
+                       "result":  "Pass",
+                       "detail":  "Live HTTP request"
+                   },
+                   {
+                       "check":  "index.html navigation target index.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "index.html navigation target about.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "index.html navigation target projects.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "index.html navigation target skills.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "index.html navigation target contact.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "index.html current navigation",
+                       "result":  "Pass",
+                       "detail":  "Current page annotation in live HTML"
+                   },
+                   {
+                       "check":  "index.html h1",
+                       "result":  "Pass",
+                       "detail":  "Exactly one primary heading"
+                   },
+                   {
+                       "check":  "index.html resource css/styles.css",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource js/main.js",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "index.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource about.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource skills.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource contact.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource #interests",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html fragment #interests",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "index.html resource assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource projects.html#currency-tracker",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html fragment projects.html#currency-tracker",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "index.html resource assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource projects.html#biocompatibility",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html fragment projects.html#biocompatibility",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "index.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "index.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "index.html image alt assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "Currency tracker summary: GBP to USD, fetch, store, read."
+                   },
+                   {
+                       "check":  "index.html image size assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "704 response bytes"
+                   },
+                   {
+                       "check":  "index.html image alt assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "Biocompatibility research summary: materials meet the human body."
+                   },
+                   {
+                       "check":  "index.html image size assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "796 response bytes"
+                   },
+                   {
+                       "check":  "about.html HTTP",
+                       "result":  "Pass",
+                       "detail":  "Live HTTP request"
+                   },
+                   {
+                       "check":  "about.html navigation target index.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "about.html navigation target about.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "about.html navigation target projects.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "about.html navigation target skills.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "about.html navigation target contact.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "about.html current navigation",
+                       "result":  "Pass",
+                       "detail":  "Current page annotation in live HTML"
+                   },
+                   {
+                       "check":  "about.html h1",
+                       "result":  "Pass",
+                       "detail":  "Exactly one primary heading"
+                   },
+                   {
+                       "check":  "about.html resource css/styles.css",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource js/main.js",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "about.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource about.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource skills.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource contact.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html resource #studies",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html fragment #studies",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "about.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "about.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "projects.html HTTP",
+                       "result":  "Pass",
+                       "detail":  "Live HTTP request"
+                   },
+                   {
+                       "check":  "projects.html navigation target index.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "projects.html navigation target about.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "projects.html navigation target projects.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "projects.html navigation target skills.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "projects.html navigation target contact.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "projects.html current navigation",
+                       "result":  "Pass",
+                       "detail":  "Current page annotation in live HTML"
+                   },
+                   {
+                       "check":  "projects.html h1",
+                       "result":  "Pass",
+                       "detail":  "Exactly one primary heading"
+                   },
+                   {
+                       "check":  "projects.html resource css/styles.css",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource js/main.js",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "projects.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource about.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource skills.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource contact.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource #project-gallery",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html fragment #project-gallery",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "projects.html resource assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource assets/notebooks/currency-tracker.ipynb",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource assets/images/news-aggregator.svg",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource assets/notebooks/news-aggregator.ipynb",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource assets/documents/biocompatibility-prosthetics-implants.docx",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "projects.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "projects.html image alt assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "Currency exchange tracker: GBP → USD. Designed summary graphic, not an application screenshot."
+                   },
+                   {
+                       "check":  "projects.html image size assets/images/currency-tracker.svg",
+                       "result":  "Pass",
+                       "detail":  "704 response bytes"
+                   },
+                   {
+                       "check":  "projects.html image alt assets/images/news-aggregator.svg",
+                       "result":  "Pass",
+                       "detail":  "News headline organizer: HEADLINES → SQLITE. Designed summary graphic, not an application screenshot."
+                   },
+                   {
+                       "check":  "projects.html image size assets/images/news-aggregator.svg",
+                       "result":  "Pass",
+                       "detail":  "721 response bytes"
+                   },
+                   {
+                       "check":  "projects.html image alt assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "Research paper summary graphic: materials meet the human body, exploring prosthetics, implants, and biocompatibility."
+                   },
+                   {
+                       "check":  "projects.html image size assets/images/biocompatibility.svg",
+                       "result":  "Pass",
+                       "detail":  "796 response bytes"
+                   },
+                   {
+                       "check":  "skills.html HTTP",
+                       "result":  "Pass",
+                       "detail":  "Live HTTP request"
+                   },
+                   {
+                       "check":  "skills.html navigation target index.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "skills.html navigation target about.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "skills.html navigation target projects.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "skills.html navigation target skills.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "skills.html navigation target contact.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "skills.html current navigation",
+                       "result":  "Pass",
+                       "detail":  "Current page annotation in live HTML"
+                   },
+                   {
+                       "check":  "skills.html h1",
+                       "result":  "Pass",
+                       "detail":  "Exactly one primary heading"
+                   },
+                   {
+                       "check":  "skills.html resource css/styles.css",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource js/main.js",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "skills.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource about.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource skills.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource contact.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html resource projects.html#currency-tracker",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html fragment projects.html#currency-tracker",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "skills.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "skills.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "contact.html HTTP",
+                       "result":  "Pass",
+                       "detail":  "Live HTTP request"
+                   },
+                   {
+                       "check":  "contact.html navigation target index.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "contact.html navigation target about.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "contact.html navigation target projects.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "contact.html navigation target skills.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "contact.html navigation target contact.html",
+                       "result":  "Pass",
+                       "detail":  "Link exists in delivered HTML; click behavior not tested"
+                   },
+                   {
+                       "check":  "contact.html current navigation",
+                       "result":  "Pass",
+                       "detail":  "Current page annotation in live HTML"
+                   },
+                   {
+                       "check":  "contact.html h1",
+                       "result":  "Pass",
+                       "detail":  "Exactly one primary heading"
+                   },
+                   {
+                       "check":  "contact.html resource css/styles.css",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource js/main.js",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "contact.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource index.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource about.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource projects.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource skills.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html resource contact.html",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html email target",
+                       "result":  "Pass",
+                       "detail":  "Address checked; email app launch not tested"
+                   },
+                   {
+                       "check":  "contact.html email target",
+                       "result":  "Pass",
+                       "detail":  "Address checked; email app launch not tested"
+                   },
+                   {
+                       "check":  "contact.html resource #main",
+                       "result":  "Pass",
+                       "detail":  "Live destination or asset returned HTTP 200"
+                   },
+                   {
+                       "check":  "contact.html fragment #main",
+                       "result":  "Pass",
+                       "detail":  "Anchor exists in live destination HTML"
+                   },
+                   {
+                       "check":  "currency-tracker notebook",
+                       "result":  "Fail",
+                       "detail":  "Live download parses as nbformat 4 with code and no saved outputs; not opened in Colab"
+                   },
+                   {
+                       "check":  "news-aggregator notebook",
+                       "result":  "Fail",
+                       "detail":  "Live download parses as nbformat 4 with code and no saved outputs; not opened in Colab"
+                   },
+                   {
+                       "check":  "Research paper download integrity",
+                       "result":  "Pass",
+                       "detail":  "Live Word download matches repository file byte-for-byte; visual opening not tested"
+                   }
+               ],
+    "limitations":  [
+                        "No screenshots or viewport validation",
+                        "No keyboard or mouse interaction results",
+                        "No new Lighthouse audits",
+                        "No browser console runtime inspection"
+                    ]
+}
