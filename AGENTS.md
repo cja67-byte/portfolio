@@ -36,6 +36,7 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 - Use consistent spacing, navigation, buttons, headings, and footers across all pages.
 - Design for phones first, then adapt layouts for laptops with media queries. Avoid horizontal scrolling.
 - Keep motion subtle and honor `prefers-reduced-motion`.
+- Selected artwork direction: Lower-left reach, as shown in the art preview. Desktop uses the fixed hand at the lower left and humanoid beneath the orange on the right. On phones, show only the humanoid and hide the hand.
 
 ## Technical rules
 - Use only plain HTML5, CSS, and JavaScript. No React, Vue, Tailwind, Bootstrap, npm, frameworks, or build tools.

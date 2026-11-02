@@ -114,3 +114,37 @@ h3 { font-size: 25px; font-weight: 500; letter-spacing: -.7px; margin: 0; }
   .project-grid { grid-template-columns: minmax(0, 1fr); }
   .project-body { padding: 20px; }
 }
+
+/* Home artwork stays fixed while the content scrolls over it. The orange
+   overlay tints the figure; decorative images never intercept clicks. */
+.home-artwork { isolation: isolate; background: #ececec; }
+.background-art {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(115deg, #ececec 0%, #c0c0c0 25%, #f4f4f4 48%, #c9c9c9 72%, #ececec 100%);
+}
+.background-art img { position: absolute; object-fit: contain; }
+.background-figure {
+  right: -20%; bottom: -3%; width: 85%; height: 94%;
+  object-position: bottom right; opacity: .19;
+}
+.background-heart { display: none; }
+.background-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 100% 8%, rgb(245 154 69 / 70%), rgb(245 154 69 / 40%) 25%, transparent 75%);
+}
+@media (min-width: 760px) {
+  .background-figure { right: 1%; width: 42%; opacity: .38; }
+  .background-heart {
+    display: block; left: -6%; bottom: 0;
+    width: 44%; height: auto; opacity: .23;
+  }
+  .background-art::after {
+    background: radial-gradient(ellipse 50vw 85vh at 100% 8vh, rgb(245 154 69 / 82%), rgb(245 154 69 / 55%) 37.5%, transparent 100%);
+  }
+}
