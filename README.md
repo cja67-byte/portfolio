@@ -8,7 +8,7 @@ Open `index.html` in a browser by double-clicking it. No installation or build s
 
 ## Current progress
 
-All five pages are available: Home, About Me, Projects, Skills, and Contact. Projects presents two Python projects from supplied Google Colab notebooks (a currency exchange tracker and a news headline organizer) and a research paper on biocompatibility in prosthetics and implants. Visitors can filter by category, expand project details and original Python code, and download source-only notebook excerpts or the original Word research paper. Home includes two selected project previews. Skills covers developing Python and SQL knowledge, introductory SolidWorks and MATLAB experience, technical and lab skills, professional skills, and languages. Contact provides the approved public email address, cja67@njit.edu, with a direct email link. Browser testing and live deployment verification remain pending.
+All five pages are available: Home, About Me, Projects, Skills, and Contact. Projects presents two Python projects from supplied Google Colab notebooks (a currency exchange tracker and a news headline organizer) and a research paper on biocompatibility in prosthetics and implants. Visitors can filter by category, expand project details and original Python code, and download source-only notebook excerpts or the original Word research paper. Home includes two selected project previews. Skills covers developing Python and SQL knowledge, introductory SolidWorks and MATLAB experience, technical and lab skills, professional skills, and languages. Contact provides the approved public email address, cja67@njit.edu, with a direct email link. Testing is documented in [TESTING.md](TESTING.md); full browser and keyboard testing remains incomplete.
 
 ## Project sources and presentation
 
@@ -18,11 +18,17 @@ SVG summary graphics in `assets/images/` were created for the portfolio; they ar
 
 ## Deployment
 
-Repository: https://github.com/cja67-byte/portfolio
+Repository: [cja67-byte/portfolio](https://github.com/cja67-byte/portfolio)
 
-Expected GitHub Pages address: https://cja67-byte.github.io/portfolio/ (deployment has not been verified).
+Live website: [Chigozirim Amaefule's portfolio](https://cja67-byte.github.io/portfolio/)
 
 Configure GitHub Pages to publish from `main` and `/ (root)`.
+
+## Repository documentation
+
+- [AGENTS.md](AGENTS.md): project requirements and development instructions.
+- [TESTING.md](TESTING.md): test cases, recorded results, and outstanding checks.
+- [REPORT.md](REPORT.md): short project report; final screenshots will be supplied by the author.
 
 ## Credits
 
