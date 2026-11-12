@@ -36,4 +36,4 @@ Personal content supplied by Chigozirim Jesse Amaefule. Development assisted by 
 
 The third showcase is Chigozirim Jesse Amaefule's ENG 102 research paper, dated April 1, 2025, from New Jersey Institute of Technology. It is presented as literature-based coursework, not experimental research. The unchanged original is available in assets/documents/. It replaces the Python data lab in the project collection.
 
-The Injustice 2 artwork in the interests sections was supplied by the author to illustrate a favorite game; it is not original portfolio artwork.
+The Injustice 2 artwork and FC Barcelona crest in the interests sections were supplied by the author to illustrate personal interests; they are not original portfolio artwork.
