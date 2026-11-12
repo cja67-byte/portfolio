@@ -1,4 +1,4 @@
-# Chigozirim Amaefule | Personal portfolio
+# Chigozirim Jesse Amaefule | Personal portfolio
 
 A personal portfolio for a Biomedical Engineering student, built with plain HTML, CSS, and JavaScript. The design uses a metallic-silver and orange background with black text.
 
@@ -20,7 +20,7 @@ SVG summary graphics in `assets/images/` were created for the portfolio; they ar
 
 Repository: [cja67-byte/portfolio](https://github.com/cja67-byte/portfolio)
 
-Live website: [Chigozirim Amaefule's portfolio](https://cja67-byte.github.io/portfolio/)
+Live website: [Chigozirim Jesse Amaefule's portfolio](https://cja67-byte.github.io/portfolio/)
 
 Configure GitHub Pages to publish from `main` and `/ (root)`.
 
@@ -32,6 +32,6 @@ Configure GitHub Pages to publish from `main` and `/ (root)`.
 
 ## Credits
 
-Personal content supplied by Chigozirim Amaefule. Development assisted by Codex. Uses system fonts and CSS gradients with no runtime dependencies. Home includes user-supplied mechanical artwork, converted to transparent PNG cutouts with AI-assisted editing; fine details may differ from the originals. The humanoid source carried a Pngtree watermark. The artwork is decorative and does not depict the student's projects. Desktop uses the selected Lower-left reach composition; phones show only the humanoid.
+Personal content supplied by Chigozirim Jesse Amaefule. Development assisted by Codex. Uses system fonts and CSS gradients with no runtime dependencies. Home includes user-supplied mechanical artwork, converted to transparent PNG cutouts with AI-assisted editing; fine details may differ from the originals. The humanoid source carried a Pngtree watermark. The artwork is decorative and does not depict the student's projects. Desktop uses the selected Lower-left reach composition; phones show only the humanoid.
 
-The third showcase is Chigozirim Amaefule's ENG 102 research paper, dated April 1, 2025, from New Jersey Institute of Technology. It is presented as literature-based coursework, not experimental research. The unchanged original is available in assets/documents/. It replaces the Python data lab in the project collection.
+The third showcase is Chigozirim Jesse Amaefule's ENG 102 research paper, dated April 1, 2025, from New Jersey Institute of Technology. It is presented as literature-based coursework, not experimental research. The unchanged original is available in assets/documents/. It replaces the Python data lab in the project collection.
