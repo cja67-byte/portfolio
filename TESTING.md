@@ -123,3 +123,16 @@ Earlier source checks confirmed relative links, one h1 per page, current-page in
 - **Not run — Lighthouse:** No connected browser was available. No Accessibility score is claimed.
 
 To finish, open each live page in Chrome, open DevTools > Lighthouse, select Accessibility, and run an audit for mobile and desktop. Record each actual score and fix/retest any page below 90. On each page, also use Tab and Shift+Tab to reach every control, Enter to follow links, Space/Enter to activate buttons and disclosures, and Escape to close the mobile menu. Verify focus is visible and never trapped. Opening an email draft is sufficient; do not send a message during testing.
+
+## November 12, 2026 additions
+
+Source checks passed for local links, one h1 per page, image alt attributes, and the three approved interests. Browser checks below have not been run.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T42 | Research page navigation | Open biocompatibility.html; follow each of the five main navigation links, return link, and paper download. | Each opens the correct destination; the Word paper downloads. | Not run |
+| T43 | Research page phone and laptop layout | View at 390 × 844 and 1366 × 768; scroll the full page. | Readable text and graphic; no horizontal overflow. | Not run |
+| T44 | Research page keyboard and menu | Tab through the page; activate links and the mobile menu with Enter; close menu. | Visible focus, usable links, accurate menu expanded state. | Not run |
+| T45 | Research page accessibility | Run Lighthouse Accessibility on the live research page. | Score at least 90. | Not run |
+| T46 | Hover and reduced motion | Hover project cards and links on Home and Projects; focus links with Tab; enable reduced motion and repeat. | Subtle pointer effects and clear keyboard focus; no movement with reduced motion. | Not run |
+| T47 | Research entry points and interests | On Home and Projects open the research story; read Home and About interests. | Both links reach the story; Injustice 2, Foo Fighters, and FC Barcelona appear. | Not run |

@@ -166,3 +166,19 @@ h3 { font-size: 25px; font-weight: 500; letter-spacing: -.7px; margin: 0; }
   .home-artwork h1 { max-width: 100%; font-size: 42px; }
   .home-artwork .section-layout { max-width: 100%; min-height: 470px; }
 }
+/* Precise-pointer hover effects; keyboard focus receives equivalent emphasis. */
+.project-card, .outlined-link, .text-link, .site-navigation a { transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, text-underline-offset 160ms ease; }
+.project-card:focus-within { border-color: #000; box-shadow: 0 4px 14px rgb(0 0 0 / 8%); }
+.outlined-link:focus-visible { background-color: rgb(236 236 236 / 65%); }
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover { transform: translateY(-3px); box-shadow: 0 7px 20px rgb(0 0 0 / 9%); }
+  .outlined-link:hover { transform: translateY(-2px); background-color: rgb(236 236 236 / 65%); }
+  .text-link:hover, .site-navigation a:hover { text-decoration: underline; text-underline-offset: 7px; }
+}
+.research-visual { margin: 0 0 48px; }
+.research-visual img { display: block; width: 100%; max-width: 960px; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
+.research-visual figcaption { max-width: 960px; font-size: 12px; margin-top: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  .project-card, .outlined-link, .text-link, .site-navigation a { transition: none; }
+  .project-card:hover, .outlined-link:hover { transform: none; }
+}

@@ -10,11 +10,12 @@ This is an editable starting draft. I selected the Clean minimal visual directio
 - Approved public contact email: cja67@njit.edu. Use a direct mailto link on Contact; no contact form is needed.
 - Approved headline: "Exploring technology that supports the human body."
 - Approved skills: Python and SQL are beginner skills currently being developed; SolidWorks and MATLAB experience is introductory. Technical and lab skills: CAD, mechanical tensile testing, biomaterial formulation, technical troubleshooting, Microsoft Office 365, data entry and reporting. Professional skills: sales management, client acquisition, team coordination, field operations, problem-solving, communication, adaptability. Languages: English (native), French (conversational, currently learning). Do not invent proficiency scores, certifications, employers, or years of experience.
-- Personal content: I study Biomedical Engineering. My interests are video games (especially fighting games at the moment), rock music, and soccer.
+- Personal content: I study Biomedical Engineering. My interests are video games (favorite fighting game: Injustice 2), rock music (favorite band: Foo Fighters), and soccer (team: FC Barcelona).
 - Academic interests and goals: My interest in prosthetics drew me to Biomedical Engineering. After graduating, I would like to work in biomaterials development.
 - Approved project sources: Currency exchange tracker (API notebook, Project 2), News headline organizer (data manipulation notebook, Question 8), and the supplied paper Biocompatibility: A Mechanical Hurdle in Prosthetics and Implants (ENG 102, New Jersey Institute of Technology, April 1, 2025). The paper replaces Python data lab as the third project. Describe it as literature-based research writing, not experimental or clinical work. Preserve original Python source in downloadable excerpts without saved outputs or metadata; never publish the weather credential. Offer the unchanged paper as a Word download. Distinguish recorded results from verified execution and summary graphics from screenshots.
 - `index.html`: Home, with a brief personal introduction and navigation.
 - `about.html`: About Me, including background, education, and interests.
+- `biocompatibility.html`: dedicated literature-based project story, linked from Home and Projects; preserve the original paper download.
 - `projects.html`: At least three projects, each with a description, image or screenshot, and a relevant link when available. Class projects count.
 - `skills.html`: Technical skills and proficiencies, described honestly.
 - `contact.html`: Public contact information, such as an email link and GitHub profile.
