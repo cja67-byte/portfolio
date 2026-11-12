@@ -35,3 +35,5 @@ Configure GitHub Pages to publish from `main` and `/ (root)`.
 Personal content supplied by Chigozirim Jesse Amaefule. Development assisted by Codex. Uses system fonts and CSS gradients with no runtime dependencies. Home includes user-supplied mechanical artwork, converted to transparent PNG cutouts with AI-assisted editing; fine details may differ from the originals. The humanoid source carried a Pngtree watermark. The artwork is decorative and does not depict the student's projects. Desktop uses the selected Lower-left reach composition; phones show only the humanoid.
 
 The third showcase is Chigozirim Jesse Amaefule's ENG 102 research paper, dated April 1, 2025, from New Jersey Institute of Technology. It is presented as literature-based coursework, not experimental research. The unchanged original is available in assets/documents/. It replaces the Python data lab in the project collection.
+
+The Injustice 2 artwork in the interests sections was supplied by the author to illustrate a favorite game; it is not original portfolio artwork.
